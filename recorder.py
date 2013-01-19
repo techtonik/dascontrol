@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 """
 Record sound from mic to sample.flac
 
@@ -34,9 +34,9 @@ limit = 60
 #res = runout('"%s" -d -q --rate 16000 -t flac %s trim 0 %s' % (sox, outfile, limit))
 res = runout('"%s" -d -q --rate 16000 -t flac %s' % (sox, outfile))
 if res.ret not in (0, None):  # None returned on KeyboardInterrupt
-    print res.out
-    print res.err
-    print res.ret
+    print(res.out)
+    print(res.err)
+    print(res.ret)
     print("Error running sox. Please check if sox is installed")
     print("or get it from http://sox.sourceforge.net/ and place")
     print("into bin directory of the current dir.")

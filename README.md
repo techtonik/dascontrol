@@ -9,7 +9,7 @@ Proof of concept
 
 [x] Get voice sample
 [x] Convert sample into text (recognize)
-[ ] Select command (match)
+[x] Select command (match)
 [x] Execute command
 
 
@@ -26,7 +26,7 @@ Components
 [x] Recorder   (mic -> sample.wav)
   [ ] (lev.2) UI (press button -- record -- unpress)
 [x] Recognizer (sample.wav -> sample.txt)
-[ ] Matcher    (sample.txt -> action.txt)
+[x] Matcher    (sample.txt -> action.txt)
 [x] Executor   (action.txt -> ...)
 
 

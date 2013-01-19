@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 """
 Execute action specified in sample.txt
 """
@@ -53,7 +53,7 @@ else:
   infile = sys.argv[1]
 
 action = open(infile).read().strip()
-print action
+print(action)
 
 for act in registry:
   if act.name == action:
