@@ -23,10 +23,11 @@ User experience
 
 Components
 ==========
-[ ] (UI) Recorder (press button -- record -- unpress)
-[ ] Recognizer
-[ ] Matcher
-[ ] Executor
+[ ] Recorder   (mic -> sample.wav)
+  [ ] (lev.2) UI (press button -- record -- unpress)
+[ ] Recognizer (sample.wav -> sample.txt)
+[ ] Matcher    (sample.txt -> action.txt)
+[ ] Executor   (action.txt -> ...)
 
 
 Out of scope
