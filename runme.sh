@@ -3,7 +3,7 @@
 # [x] Recorder
 # [x] Recognizer
 # [ ] Matcher
-# [ ] Executor
+# [x] Executor
 
 # Recorder
 python recorder.py sample.flac
@@ -14,5 +14,5 @@ curl --data-binary @sample.flac -k --header "Content-type: audio/x-flac; rate=16
 # [ ] Matcher
 cp sample.txt action.txt
 
-# [ ] Executor
-cat action.txt
+# [x] Executor
+python executor.py action.txt

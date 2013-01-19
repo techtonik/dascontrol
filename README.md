@@ -10,7 +10,7 @@ Proof of concept
 [x] Get voice sample
 [x] Convert sample into text (recognize)
 [ ] Select command (match)
-[ ] Execute command
+[x] Execute command
 
 
 User experience
@@ -25,9 +25,9 @@ Components
 ==========
 [x] Recorder   (mic -> sample.wav)
   [ ] (lev.2) UI (press button -- record -- unpress)
-[ ] Recognizer (sample.wav -> sample.txt)
+[x] Recognizer (sample.wav -> sample.txt)
 [ ] Matcher    (sample.txt -> action.txt)
-[ ] Executor   (action.txt -> ...)
+[x] Executor   (action.txt -> ...)
 
 
 Out of scope
@@ -61,7 +61,7 @@ Requisites:
 Go cross-platform
 [x] Python (Lin/Win/OS) recording
 [ ] Python Google API request (requests lib)
-[ ] Python Action Executor
+[x] Python Action Executor
 [ ] JSON Action Map
 
 
