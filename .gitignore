@@ -1,2 +1,4 @@
-sample.ogg
 sample.txt
+bin/
+*.pyc
+*.flac

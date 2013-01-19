@@ -7,15 +7,15 @@ Computer listens people.
 Proof of concept
 ================
 
-[ ] Get voice sample
-[ ] Convert sample into text (recognize)
+[x] Get voice sample
+[x] Convert sample into text (recognize)
 [ ] Select command (match)
 [ ] Execute command
 
 
 User experience
 ===============
-[ ] Single top level command to start the process
+[x] Single top level command to start the process
 [ ] Signal to start and end recording
 [ ] Show "..processing.." state while recognizing
 [ ] Show text
@@ -23,7 +23,7 @@ User experience
 
 Components
 ==========
-[ ] Recorder   (mic -> sample.wav)
+[x] Recorder   (mic -> sample.wav)
   [ ] (lev.2) UI (press button -- record -- unpress)
 [ ] Recognizer (sample.wav -> sample.txt)
 [ ] Matcher    (sample.txt -> action.txt)
@@ -47,18 +47,19 @@ Requisites:
 
 Every component is shell script:
 [x] Console scripts
-[x] sox as a prerequisite
 
 
 Phase Two
 =========
 Requisites:
  * Python
+   * setuptools
    * requests
    * PyAudio
+     > python -m easy_install pyaudio
 
 Go cross-platform
-[ ] Python (Lin/Win/OS) recording
+[x] Python (Lin/Win/OS) recording
 [ ] Python Google API request (requests lib)
 [ ] Python Action Executor
 [ ] JSON Action Map
