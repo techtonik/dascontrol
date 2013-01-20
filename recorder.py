@@ -3,6 +3,8 @@
 Record sound from mic to sample.flac
 
 FLAC is only needed if Google Recognition Engine is used.
+
+[ ] sound interrupted by Ctrl-C is stripped
 """
 
 # hacking to use Python libraries from lib/ dir

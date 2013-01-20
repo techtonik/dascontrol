@@ -60,7 +60,7 @@ Requisites:
 
 Go cross-platform
 [x] Python (Lin/Win/OS) recording
-[ ] Python Google API request (requests lib)
+[x] Python Google API request (requests lib)
 [x] Python Action Executor
 [ ] JSON Action Map
 
