@@ -13,7 +13,7 @@ python recorder.py sample.flac
 python recognizer-google.py sample.flac
 
 # Matcher
-clisp matcher.lisp
+python matcher.py
 
 # Executor
 python executor.py action.txt

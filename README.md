@@ -50,17 +50,16 @@ Every component is shell script:
 [x] Console scripts
 
 
-Phase Two
-=========
+Phase Two (Done)
+================
 Requisites:
  * sox
  * Python
-   * setuptools
 
 Go cross-platform
 [x] Python (Lin/Win/OS) recording
 [x] Python Google API request (requests lib)
-[ ] Python Matcher
+[x] Python Matcher
 [x] Python Action Executor
 
 
