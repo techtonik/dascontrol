@@ -37,13 +37,14 @@ Out of scope
       current version of Sphinx CMU)
 
 
-Phase One
-=========
+Phase One (Done)
+================
 Requisites:
  * Linux
  * curl
  * jshon
  * sox
+ * clisp
 
 Every component is shell script:
 [x] Console scripts
@@ -52,17 +53,15 @@ Every component is shell script:
 Phase Two
 =========
 Requisites:
+ * sox
  * Python
    * setuptools
-   * requests
-   * PyAudio
-     > python -m easy_install pyaudio
 
 Go cross-platform
 [x] Python (Lin/Win/OS) recording
 [x] Python Google API request (requests lib)
+[ ] Python Matcher
 [x] Python Action Executor
-[ ] JSON Action Map
 
 
 Phase Three
