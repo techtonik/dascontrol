@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+import webbrowser
+webbrowser.open("http://www.4duk.ru/4duk/playerPage.action?play=true")

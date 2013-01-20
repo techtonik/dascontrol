@@ -1,60 +1,44 @@
 #!/usr/bin/env python
 """
 Execute action specified in sample.txt
+
+Actions are scripts in actions/ directory
 """
+
 import os
+import subprocess
 import sys
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
-BIN = os.path.join(ROOT, 'bin')
-LIB = os.path.join(ROOT, 'lib')
-sys.path += [LIB]
-
-# hacking to use Python libraries from lib/ dir
-
-from shrun import runret, runout, which
-
-class Action(object):
-  """Action that executes program"""
-  name = None
-  command = None
-
-  def __init__(self, name, command):
-    self.name = name
-    self.command = command
-
-  def run(self):
-    runret(command)
-
-class PythonAction(object):
-  def __init__(self, name, runnable):
-    self.name = name
-    self.run = runnable
-
-# --- add actions
-
-# music.start
-def start_online_radio():
-  import webbrowser
-  webbrowser.open("http://www.4duk.ru/4duk/playerPage.action?play=true")
-    
-music_start = PythonAction('music.start', start_online_radio)
-
-registry = []
-registry.append(music_start)
-
+ACTIONDIR = os.path.join(ROOT, 'actions')
 
 # --- process action
-
+# read action
 if len(sys.argv) < 2:
-  # default is useful for debugging
-  infile = "action.txt"
+    # default is useful for debugging
+    infile = "action.txt"
 else:
-  infile = sys.argv[1]
+    infile = sys.argv[1]
 
 action = open(infile).read().strip()
 print(action)
 
-for act in registry:
-  if act.name == action:
-    act.run()
+# look into actions/ dir and execute file under the given name
+# detect how to execute the file by looking at its first line
+action_script = os.path.join(ACTIONDIR, action)
+if not os.path.exists(action_script):
+    print("Unknown action '%s'" % action)
+    sys.exit(-1)
+else:
+    python_signature = '#!/usr/bin/env python'
+    signature = open(action_script).read(1024)
+    command = None
+    if signature.startswith(python_signature):
+        command = [sys.executable] + [action_script]
+    else:
+        command = [action_script]
+    # [ ] reuse asyncprocess
+    process = subprocess.Popen(command, shell=True)
+    out, err = process.communicate()
+    if process.returncode != 0:
+        sys.exit("Some error occured. Exiting.")
