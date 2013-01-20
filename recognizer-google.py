@@ -37,10 +37,15 @@ else:
 with open(infile, 'rb') as flac:
   r = requests.post('https://www.google.com/speech-api/v1/recognize?lang=ru-RU&client=chromium',
         data=flac, headers={'Content-type': 'audio/x-flac; rate=16000'})
-if r.status_code != 200:
+if r.status_code == 400:
+  # [ ] event to rerun record/recognition cycle process
+  print("Recognition failed.")
+  sys.exit(-1)
+elif r.status_code != 200:
   print(r.status_code)
   print("Error accessing Google Voice Recognition API")
-  sys.exit(1)
+  #print(r.text.encode('utf-8'))
+  sys.exit(r.status_code)
 
 #print(r.text.encode('utf-8'))
 resp = json.loads(r.text)

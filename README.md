@@ -3,6 +3,8 @@ dascontrol
 
 Computer listens people.
 
+> python RUNME.py
+
 
 Proof of concept
 ================
