@@ -3,7 +3,7 @@ dascontrol
 
 Computer listens people.
 
-    > python RUNME.py
+    python RUNME.py
 
 
 Proof of concept
@@ -75,6 +75,7 @@ Phase Three
 Graphics UI
   * pyglet/pygame
   * or anything (web/kivy + websockets)
+
 
     [ ] three static screens
     [ ] state machine
